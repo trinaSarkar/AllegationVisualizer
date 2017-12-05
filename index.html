@@ -1,10 +1,11 @@
 <html>
 <head>
-	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="allegationVisualizer.css">
+	<script src="http://d3js.org/d3.v3.min.js"></script>
 </head>
 <body>
+	<script src="allegationVisualizer.js"></script>
 	<div id = "heading">
 		<br>
 		<br>
@@ -15,12 +16,12 @@
 		<br><br><br>
 	<div class = "main">
 		<div class="scroll">
-		<span class="kevin">
+		<span class="col">
 			<span class = "name">Kevin Spacey</span>
 			<br>
 			<img src="data/kevin.png">
 			<br>
-			<div class="timeline">
+			<div class="timeline" id="kevin">
   				<div class="container left">
 	    			<!-- <div class="content">
 	    				<span class="line"></span>
@@ -32,12 +33,12 @@
   				</div>
 			</div>
 		</span>
-		<span class="james">
+		<span class="col" id="james">
 			<span class = "name">James Toback</span>
 			<br>
 			<img src="data/toback.png">
 			<br>
-			<div class="timeline">
+			<div class="timeline" id="james">
   				<div class="container left">
 	    			<!-- <div class="content">
 	    				<span class="line"></span>
@@ -49,7 +50,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="rose">
+		<span class="col" id="rose">
 			<span class = "name">Charlie Rose</span>
 			<br>
 			<img src="data/charlierose.png">
@@ -66,7 +67,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="louis">
+		<span class="col" id="louis">
 			<span class = "name">Louis C.K.</span>
 			<br>
 			<img src="data/louisck.png">
@@ -83,7 +84,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="lauer">
+		<span class="col" id="lauer">
 			<span class = "name">Matt Lauer</span>
 			<br>
 			<img src="data/mattlauer.png">
@@ -100,7 +101,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="weinstein">
+		<span class="col" id="weinstein">
 			<span class = "name">Harvey Weinstein</span>
 			<br>
 			<img src="data/weinstein.png">
@@ -117,7 +118,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="ratner">
+		<span class="col" id="ratner">
 			<span class = "name">Brett Ratner</span>
 			<br>
 			<img src="data/ratner.png">
@@ -134,7 +135,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="franken">
+		<span class="col" id="franken">
 			<span class = "name">Al Franken</span>
 			<br>
 			<img src="data/franken.png">
@@ -151,7 +152,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="bush">
+		<span class="col" id="bush">
 			<span class = "name">George H.W. Bush</span>
 			<br>
 			<img src="data/bush.png">
@@ -168,7 +169,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="trump">
+		<span class="col" id="trump">
 			<span class = "name">Donald Trump</span>
 			<br>
 			<img src="data/trump.png">
@@ -185,7 +186,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="roy">
+		<span class="col" id="roy">
 			<span class = "name">Roy Moore</span>
 			<br>
 			<img src="data/roymoore.png">
