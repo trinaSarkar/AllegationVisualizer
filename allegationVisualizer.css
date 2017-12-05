@@ -33,7 +33,6 @@ body {
 	width: 1500px;
 }
 
-/**/
 
 img {
 	width:100px;
@@ -67,7 +66,7 @@ body {
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
-  max-width: 200px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -81,6 +80,7 @@ body {
   top: 0;
   bottom: 0;
   margin-left:40px;
+  margin-right: 20px;
 }
 
  /*Container around content */
@@ -189,6 +189,22 @@ body {
     left: 0%;
   }*/
 }
+
+.subtitle {
+	font-size: 10px;
+ 	text-align: left;
+ 	position: absolute;
+ 	color: white;
+ 	margin-top: -4px;
+}
+
+ #allegation {
+ 	margin-left: -10px;
+ }
+
+ #achievement {
+ 	margin-left: 50px;
+ }
 
 span, div {
 	display: inline-block;

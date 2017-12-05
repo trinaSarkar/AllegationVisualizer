@@ -67,11 +67,11 @@ function drawTimeline(filterData, name) {
 	  				 .append("line");
 	  let lineAttr =  lines.attr("x1", function(d) {
 	  									if (d.type == "Allegation") return rect.x;
-	  									else if (d.type == "Achievement")return rect.x + 30;})
+	  									else if (d.type == "Achievement")return rect.x + 32;})
 						 	.attr("y1", function(d) { return rect.y + ((d.year - 1967) * 10);})
 						    .attr("x2",function(d) {
-	  									if (d.type == "Allegation") return rect.x + 30;
-	  									else if (d.type == "Achievement")return rect.x + 80;})
+	  									if (d.type == "Allegation") return rect.x + 32;
+	  									else if (d.type == "Achievement")return rect.x + 62;})
 						    .attr("y2", function(d) {return rect.y + ((d.year - 1967) * 10);})
 						    .attr("stroke-width", 2)
 						    .attr("stroke", function(d) {
@@ -94,6 +94,14 @@ function drawTimeline(filterData, name) {
 					        });
 	
 };
+
+function drawLegend() {
+	var rect = document.getElementById('legend').getBoundingClientRect();
+	let lines = svg.selectAll('line')
+					.append('line')
+
+	let lineAttr = lines.attr('x1', )
+}
 
 
 
