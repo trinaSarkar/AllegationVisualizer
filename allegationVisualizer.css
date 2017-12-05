@@ -75,7 +75,7 @@ body {
   content: '';
   position: absolute;
   width: 1px;
-  height: 500px;
+  height: 600px;
   background-color: white;
   top: 0;
   bottom: 0;
@@ -237,6 +237,21 @@ div.tooltip {
     z-index: 1;		
 }
 
+#legend {
+	position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
 
-
-
+/* The actual timeline (the vertical ruler) */
+#legend::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 500px;
+  background-color: #474e5d;
+  top: 0;
+  bottom: 0;
+  margin-left:40px;
+  margin-right: 20px;
+}

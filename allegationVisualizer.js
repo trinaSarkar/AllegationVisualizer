@@ -35,6 +35,7 @@ function loadVisualization(error, allData) {
   for (var i = 0; i < names.length; i++) {
   	drawTimeline(filter(names[i]), names[i]);
   }
+  drawLegend(); 
 }
 
 var startOffset = 0; 
@@ -99,8 +100,21 @@ function drawLegend() {
 	var rect = document.getElementById('legend').getBoundingClientRect();
 	let lines = svg.selectAll('line')
 					.append('line')
-
-	let lineAttr = lines.attr('x1', )
+	var x = rect.x;
+	var y = rect.y
+	var newyear = 1960; 
+	var yoffset = 0;
+	for (var i = 0; i < 7; i++) {
+		svg.append('text')
+			.attr("x", x)
+          	.attr("y", y + yoffset)
+          	.text(newyear)
+          	.attr("font-family", "sans-serif")
+          	.attr("font-size", "15px")
+          	.attr("fill", "white");
+        newyear += 10;
+		yoffset = (newyear - 1960) * 10; 
+	}
 }
 
 
