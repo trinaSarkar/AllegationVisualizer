@@ -21,11 +21,32 @@ function projectData(dataPoint) {
   }
 };
 
+function filter(name) {
+  let filteredData = dataset.filter(function(d) {
+  	 return d.person == name; 
+  }
+  return filteredData; 
+}
+
 function loadVisualization(error, allData) {
   window.dataset = allData; 
-  if (error) throw error; 
+  if (error) throw error;
+  var names = document.getElementsByClassName('name'); 
+  for (var i = 0; i < names.length; i++) {
+  	drawTimeline(filter(name), name);
+  }
+}
 
-  var div = document.getElementById("kevin");
+function getStartPoint(d) {
+
+}
+
+function getEndPoint(d) {
+
+}
+
+function drawTimeline(filterData, name) {
+  var div = 
   var rect = div.getBoundingClientRect();
 
   let lines = svg.selectAll('line');
@@ -33,11 +54,11 @@ function loadVisualization(error, allData) {
 
   let enterSelection = updatedLines.enter();
   let newLines = enterSelection.append('line') 
-  .attr("x1", rect.x)
+  	.attr("x1", rect.x)
  	.attr("y1", rect.y)
-    .attr("x2", rect.x + 50)
+    .attr("x2", rect.x + 30)
     .attr("y2", rect.y)
-    .attr("stroke-width", 4)
+    .attr("stroke-width", 2)
     .attr("stroke", "white")
     .on("mouseover", function(d) {		
             toolTip.transition()		
