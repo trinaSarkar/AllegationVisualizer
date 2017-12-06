@@ -13,22 +13,19 @@
 		<br>
 		<br>
 		<span id = "filters">
-			<button onClick="positive()" class = "btn positive">Positive Outcome</button>
-			<button class = "btn negative">Negative Outcome</button>
-			<button class = "btn admit">Admitted Allegations</button>
-		<!-- 	<button class = "btn positive"></button>
-			<button class = "btn positive"></button> -->
+			<input id="hollywoodBtn" class = "checkbox" type="checkbox">Hollywood</input>
+			<input id="washingtonBtn" class = "checkbox" type="checkbox">Washington</input>
+			<input id="positive" class = "checkbox" type="checkbox">No Outcome</input>
+			<input id="negative" class = "checkbox" type="checkbox">Negative Outcome</input>
+			<input id="allegationBtn" class = "checkbox" type="checkbox">Admitted All/Some Allegations</input>
+			<input id="deniedBtn" class = "checkbox" type="checkbox"> Denied All Allegations</input>
 		</span>
 	</div>
 		<br><br>
-	<!-- <div class = "headings">
-		<span class = "headingTitle"> Hollywood </span>
-		<span class = "headingTitle"> Washington </span>
-	</div> -->
 	<div class = "main">
 		<div class="scroll">
-		<span class="col">
-			<span class = "name negativeOutcome">Kevin Spacey</span>
+		<span class="col negativeOutcome hollywood denied">
+			<span class = "name">Kevin Spacey</span>
 			<br>
 			<img src="data/kevin.png">
 			<br>
@@ -41,8 +38,8 @@
   				</div>
 			</div>
 		</span>
-		<span class="col">
-			<span class = "name negativeOutcome">James Toback</span>
+		<span class="col negativeOutcome admitted hollywood">
+			<span class = "name">James Toback</span>
 			<br>
 			<img src="data/toback.png">
 			<br>
@@ -55,8 +52,8 @@
   				</div>
 			</div>
 		</span>
-		<span class="col">
-			<span class = "name negativeOutcome">Charlie Rose</span>
+		<span class="col negativeOutcome hollywood denied">
+			<span class = "name">Charlie Rose</span>
 			<br>
 			<img src="data/charlierose.png">
 			<br>
@@ -69,8 +66,8 @@
   				</div>
 			</div>
 		</span>
-		<span class="col">
-			<span class = "name negativeOutcome">Louis C.K.</span>
+		<span class="col negativeOutcome hollywood denied">
+			<span class = "name">Louis C.K.</span>
 			<br>
 			<img src="data/louisck.png">
 			<br>
@@ -83,8 +80,8 @@
   				</div>
 			</div>
 		</span>
-		<span class="col">
-			<span class = "name negativeOutcome">Matt Lauer</span>
+		<span class="col negativeOutcome hollywood denied">
+			<span class = "name">Matt Lauer</span>
 			<br>
 			<img src="data/mattlauer.png">
 			<br>
@@ -97,8 +94,8 @@
   				</div>
 			</div>
 		</span>
-		<span class="col">
-			<span class = "name negativeOutcome">Harvey Weinstein</span>
+		<span class="col negativeOutcome hollywood denied">
+			<span class = "name">Harvey Weinstein</span>
 			<br>
 			<img src="data/weinstein.png">
 			<br>
@@ -111,8 +108,8 @@
   				</div>
 			</div>
 		</span>
-		<span class="col">
-			<span class = "name negativeOutcome">Brett Ratner</span>
+		<span class="col negativeOutcome admitted hollywood">
+			<span class = "name">Brett Ratner</span>
 			<br>
 			<img src="data/ratner.png">
 			<br>
@@ -125,8 +122,8 @@
   				</div>
 			</div>
 		</span>
-		<span class="col">
-			<span class = "name positiveOutcome">Al Franken</span>
+		<span class="col positiveOutcome washington denied">
+			<span class = "name ">Al Franken</span>
 			<br>
 			<img src="data/franken.png">
 			<br>
@@ -139,7 +136,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="col positiveOutcome">
+		<span class="col positiveOutcome admitted washington">
 			<span class = "name">George H. W. Bush</span>
 			<br>
 			<img src="data/bush.png">
@@ -153,7 +150,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="col positiveOutcome">
+		<span class="col positiveOutcome admitted washington">
 			<span class = "name">Donald Trump</span>
 			<br>
 			<img src="data/trump.png">
@@ -167,7 +164,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="col positiveOutcome">
+		<span class="col positiveOutcome admitted washington ">
 			<span class = "name">Roy Moore</span>
 			<br>
 			<img src="data/roymoore.png">

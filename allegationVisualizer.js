@@ -9,6 +9,106 @@ var toolTip = d3.select("body").append("div")
 .attr("class", "tooltip")	
 .style("opacity", 0);
 
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    var posBtn = document.getElementById('positive');
+    posBtn.onclick = function () {
+    	var negatives = document.getElementsByClassName("negativeOutcome")
+    	if (!posBtn.checked) {
+    		for (var i = 0; i < negatives.length; i++) {
+    		 	var img = negatives[i].children[2];
+    			img.style.opacity = "1.0"
+
+    		}
+    	} else {
+    		for (var i = 0; i < negatives.length; i++) {
+    		 	var img = negatives[i].children[2];
+    			img.style.opacity = "0.2"
+    		 }
+    	}
+    }
+
+    var negBtn = document.getElementById('negative');
+    negBtn.onclick = function () {
+    	var positives = document.getElementsByClassName("positiveOutcome");
+    	if (!negBtn.checked) {
+    		for (var i = 0; i < positives.length; i++) {
+    			var img = positives[i].children[2];
+    			img.style.opacity = "1.0"
+    		}
+    	} else {
+    		for (var i = 0; i < positives.length; i++) {
+    			var img = positives[i].children[2];
+    			img.style.opacity = "0.2"
+    		 }
+    	}
+    }
+
+    var admitBtn = document.getElementById('allegationBtn');
+    admitBtn.onclick = function () {
+    	var admits = document.getElementsByClassName("admitted")
+    	if (!admitBtn.checked) {
+    		for (var i = 0; i < admits.length; i++) {
+    		 	var img = admits[i].children[2];
+    			img.style.opacity = "1.0"
+    		}
+    	} else {
+    		for (var i = 0; i < admits.length; i++) {
+    		 	var img = admits[i].children[2];
+    			img.style.opacity = "0.2"
+    		 }
+    	}
+    }
+
+    var hollyBtn = document.getElementById('hollywoodBtn');
+    hollyBtn.onclick = function () {
+    	var hollywood = document.getElementsByClassName("hollywood");
+    	if (!hollyBtn.checked) {
+    		for (var i = 0; i < hollywood.length; i++) {
+    		 	var img = hollywood[i].children[2];
+    			img.style.opacity = "1.0"
+    		}
+    	} else {
+    		for (var i = 0; i < hollywood.length; i++) {
+    		 	var img = hollywood[i].children[2];
+    			img.style.opacity = "0.2"
+    		 }
+    	}
+    }
+
+    var washBtn = document.getElementById('washingtonBtn');
+    washBtn.onclick = function () {
+    	var washington = document.getElementsByClassName("washington");
+    	if (!washBtn.checked) {
+    		for (var i = 0; i < washington.length; i++) {
+    		 	var img = washington[i].children[2];
+    			img.style.opacity = "1.0"
+    		}
+    	} else {
+    		for (var i = 0; i < washington.length; i++) {
+    		 	var img = washington[i].children[2];
+    			img.style.opacity = "0.2"
+    		 }
+    	}
+    }
+
+    var denyBtn = document.getElementById('deniedBtn');
+    denyBtn.onclick = function () {
+    	var denied = document.getElementsByClassName("denied");
+    	if (!denyBtn.checked) {
+    		for (var i = 0; i < denied.length; i++) {
+    		 	var img = denied[i].children[2];
+    			img.style.opacity = "1.0"
+    		}
+    	} else {
+    		for (var i = 0; i < denied.length; i++) {
+    		 	var img = denied[i].children[2];
+    			img.style.opacity = "0.2"
+    		 }
+    	}
+    }
+});
+
 var index = 0; 
 var outcomes = []; 
 function projectData(dataPoint) {
@@ -158,10 +258,6 @@ function drawOutcomes(name) {
 						});;	
 }
 
-function positive() {
-	console.log('HEY');
-	document.getElementsByClassName("negativeOutcome").style.visibility = "hidden";
-}
 
 
 
