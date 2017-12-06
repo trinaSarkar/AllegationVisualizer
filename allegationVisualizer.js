@@ -87,7 +87,7 @@ function drawTimeline(filterData, name) {
 		if (d.type == "Allegation") return x + 32;
 		else if (d.type == "Achievement")return x + 64;})
 	.attr("y2", function(d) {return y + ((d.year - 1960) * 10);})
-	.attr("stroke-width", 2)
+	.attr("stroke-width", 3)
 	.attr("stroke", function(d) {
 		if (d.type == "Allegation") return "red";
 		else if (d.type == "Achievement") return "green";
@@ -132,10 +132,8 @@ function drawLegend() {
 
 function drawOutcomes(name) {
 	var firstname = name.innerText.split(" ")[0].toLowerCase();
-	console.log(firstname);
 	var timeline = document.getElementById(firstname);
 	var outcome = outcomes[firstname];
-	console.log(outcome);
 	var box = timeline.getBoundingClientRect();
 	var y = box.y;
 	var x = box.x;
@@ -158,6 +156,11 @@ function drawOutcomes(name) {
 							.duration(500)		
 							.style("opacity", 0);	
 						});;	
+}
+
+function positive() {
+	console.log('HEY');
+	document.getElementsByClassName("negativeOutcome").style.visibility = "hidden";
 }
 
 

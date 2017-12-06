@@ -13,9 +13,9 @@
 		<br>
 		<br>
 		<span id = "filters">
-			<button class = "btn positive" onclick="positive()";>Positive Outcome</button>
-			<button class = "btn positive">Negative Outcome</button>
-			<button class = "btn positive">Admitted Allegations</button>
+			<button onClick="positive()" class = "btn positive">Positive Outcome</button>
+			<button class = "btn negative">Negative Outcome</button>
+			<button class = "btn admit">Admitted Allegations</button>
 		<!-- 	<button class = "btn positive"></button>
 			<button class = "btn positive"></button> -->
 		</span>
@@ -28,7 +28,7 @@
 	<div class = "main">
 		<div class="scroll">
 		<span class="col">
-			<span class = "name">Kevin Spacey</span>
+			<span class = "name negativeOutcome">Kevin Spacey</span>
 			<br>
 			<img src="data/kevin.png">
 			<br>
@@ -42,7 +42,7 @@
 			</div>
 		</span>
 		<span class="col">
-			<span class = "name">James Toback</span>
+			<span class = "name negativeOutcome">James Toback</span>
 			<br>
 			<img src="data/toback.png">
 			<br>
@@ -56,7 +56,7 @@
 			</div>
 		</span>
 		<span class="col">
-			<span class = "name">Charlie Rose</span>
+			<span class = "name negativeOutcome">Charlie Rose</span>
 			<br>
 			<img src="data/charlierose.png">
 			<br>
@@ -70,7 +70,7 @@
 			</div>
 		</span>
 		<span class="col">
-			<span class = "name">Louis C.K.</span>
+			<span class = "name negativeOutcome">Louis C.K.</span>
 			<br>
 			<img src="data/louisck.png">
 			<br>
@@ -84,7 +84,7 @@
 			</div>
 		</span>
 		<span class="col">
-			<span class = "name">Matt Lauer</span>
+			<span class = "name negativeOutcome">Matt Lauer</span>
 			<br>
 			<img src="data/mattlauer.png">
 			<br>
@@ -98,7 +98,7 @@
 			</div>
 		</span>
 		<span class="col">
-			<span class = "name">Harvey Weinstein</span>
+			<span class = "name negativeOutcome">Harvey Weinstein</span>
 			<br>
 			<img src="data/weinstein.png">
 			<br>
@@ -112,7 +112,7 @@
 			</div>
 		</span>
 		<span class="col">
-			<span class = "name">Brett Ratner</span>
+			<span class = "name negativeOutcome">Brett Ratner</span>
 			<br>
 			<img src="data/ratner.png">
 			<br>
@@ -126,7 +126,7 @@
 			</div>
 		</span>
 		<span class="col">
-			<span class = "name">Al Franken</span>
+			<span class = "name positiveOutcome">Al Franken</span>
 			<br>
 			<img src="data/franken.png">
 			<br>
@@ -139,7 +139,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="col">
+		<span class="col positiveOutcome">
 			<span class = "name">George H. W. Bush</span>
 			<br>
 			<img src="data/bush.png">
@@ -153,7 +153,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="col">
+		<span class="col positiveOutcome">
 			<span class = "name">Donald Trump</span>
 			<br>
 			<img src="data/trump.png">
@@ -167,7 +167,7 @@
   				</div>
 			</div>
 		</span>
-		<span class="col">
+		<span class="col positiveOutcome">
 			<span class = "name">Roy Moore</span>
 			<br>
 			<img src="data/roymoore.png">
