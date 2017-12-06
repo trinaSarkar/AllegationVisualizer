@@ -2,8 +2,8 @@ d3.csv("/data/data.csv", projectData, loadVisualization);
 
 var svg = d3.select('body').append('svg')
 .attr('id', 'bodySVG')
-.attr('width', 5000)
-.attr('height', 5000)
+.attr('width', 1500)
+.attr('height', 1000)
 
 var toolTip = d3.select("body").append("div")	
     .attr("class", "tooltip")	
@@ -52,28 +52,37 @@ function getEndPoint(d) {
 
 }
 
-// function getYOffset(year) {
-// 	return year %
-// }
+function getHeight(content) {
+	if (content.length > 100) {
+		return 200;
+	} else if (content.length > 50) {
+		return 150;
+	} else if (content.length > 30) {
+		return 100; 
+	} else {
+		return 50;
+	}
+}
 
 function drawTimeline(filterData, name) {
   var firstname = name.innerText.split(" ")[0].toLowerCase();
   var timeline = document.getElementById(firstname);
   var rect = timeline.getBoundingClientRect();
-   
+   var y = rect.y;
+   var x = rect.x;
    var yOffset = 0;
 	let lines = svg.selectAll('line.'+firstname)
 	  				 .data(filterData)
 	  				 .enter()
 	  				 .append("line");
 	  let lineAttr =  lines.attr("x1", function(d) {
-	  									if (d.type == "Allegation") return rect.x;
-	  									else if (d.type == "Achievement")return rect.x + 32;})
-						 	.attr("y1", function(d) { return rect.y + ((d.year - 1967) * 10);})
+	  									if (d.type == "Allegation") return x;
+	  									else if (d.type == "Achievement")return x + 32;})
+						 	.attr("y1", function(d) { return y + ((d.year - 1960) * 10);})
 						    .attr("x2",function(d) {
-	  									if (d.type == "Allegation") return rect.x + 32;
-	  									else if (d.type == "Achievement")return rect.x + 62;})
-						    .attr("y2", function(d) {return rect.y + ((d.year - 1967) * 10);})
+	  									if (d.type == "Allegation") return x + 32;
+	  									else if (d.type == "Achievement")return x + 64;})
+						    .attr("y2", function(d) {return y + ((d.year - 1960) * 10);})
 						    .attr("stroke-width", 2)
 						    .attr("stroke", function(d) {
 						    			if (d.type == "Allegation") return "red";
@@ -86,7 +95,8 @@ function drawTimeline(filterData, name) {
 					                .style("opacity", .9);		
 					            toolTip.html(d.year + "<br/>"  + d.content)	
 					                .style("left", (d3.event.pageX) + "px")		
-					                .style("top", (d3.event.pageY - 28) + "px");	
+					                .style("top", (d3.event.pageY - 28) + "px")
+					                .style("height", getHeight(d.content));	
 				            })					
 					        .on("mouseout", function(d) {		
 					            toolTip.transition()		
@@ -108,7 +118,7 @@ function drawLegend() {
 		svg.append('text')
 			.attr("x", x)
           	.attr("y", y + yoffset)
-          	.text(newyear)
+          	.text("-" +  newyear)
           	.attr("font-family", "sans-serif")
           	.attr("font-size", "15px")
           	.attr("fill", "white");
