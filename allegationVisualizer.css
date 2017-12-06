@@ -4,12 +4,13 @@ body {
 }
 
 #title {
-	color: white;
+	color: #696969;
 	font-size: 50px;
 	text-align:center;
 }
 
 #heading {
+  font-family: 'PT Sans', sans-serif;
 	text-align: center;
 	display: block;
 }
@@ -17,6 +18,16 @@ body {
 @font-face {
 	font-family: "AvenirLTStd";
 	src: url("font/AvenirLTStd-Roman.otf");
+}
+
+.headings {
+  text-align: center;
+  display: block;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.headingTitle {
+  text-align: center;
 }
 
 .main {
@@ -39,15 +50,20 @@ img {
 
 .vr {
     width:1px;
-    background-color:white;
+    background-color:#696969;
     position:absolute;
     top:290px;
     bottom:0;
     left:60px;
 }
 
+img {
+  -webkit-filter: sepia(0.6);
+  filter: sepia(0.6);
+}
+
 .name {
-	color: white;
+	color: #696969;
 	text-align: center;
 	white-space: pre-line;
 }
@@ -58,7 +74,8 @@ img {
 
 /* Set a background color */
 body {
-  background-color: #474e5d;
+  background-color: #ededed;
+  /*background-color: #474e5d;*/
   font-family: Helvetica, sans-serif;
 }
 
@@ -75,7 +92,7 @@ body {
   position: absolute;
   width: 1px;
   height: 600px;
-  background-color: white;
+  background-color: #696969;
   top: 0;
   bottom: 0;
   margin-left:40px;
@@ -150,7 +167,7 @@ body {
 /*The actual content */
 .content {
   padding: 20px 30px;
-  background-color: white;
+  background-color: #696969;
   position: relative;
   border-radius: 6px;
 
@@ -193,7 +210,7 @@ body {
 	font-size: 10px;
  	text-align: left;
  	position: absolute;
- 	color: white;
+ 	color: #696969;
  	margin-top: -4px;
 }
 
@@ -255,3 +272,24 @@ div.tooltip {
   margin-left:40px;
   margin-right: 20px;
 }
+
+.btn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 10px;
+  font-family: 'PT Sans', sans-serif;
+  color: #696969;
+  font-size: 20px;
+  /*background: #c9a5de;*/
+  background: lightgray;
+  padding: 5px 15px 5px 10px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: black;
+  text-decoration: none;
+}
+
+
