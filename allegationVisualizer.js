@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var hollyBtn = document.getElementById('hollywoodBtn');
     hollyBtn.onclick = function () {
-    	var hollywood = document.getElementsByClassName("washington");
+    	var hollywood = document.getElementsByClassName("hollywood");
     	if (!hollyBtn.checked) {
     		for (var i = 0; i < hollywood.length; i++) {
     		 	var img = hollywood[i].children[2];
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var washBtn = document.getElementById('washingtonBtn');
     washBtn.onclick = function () {
-    	var washington = document.getElementsByClassName("hollywood");
+    	var washington = document.getElementsByClassName("washington");
     	if (!washBtn.checked) {
     		for (var i = 0; i < washington.length; i++) {
     		 	var img = washington[i].children[2];
@@ -257,7 +257,6 @@ function drawOutcomes(name) {
 							.style("opacity", 0);	
 						});;	
 }
-
 
 
 

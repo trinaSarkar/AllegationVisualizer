@@ -1,23 +1,23 @@
 body {
-	background-color: black;
-	font-family: 'PT Sans', sans-serif;
+  background-color: black;
+  font-family: 'PT Sans', sans-serif;
 }
 
 #title {
-	color: #696969;
-	font-size: 50px;
-	text-align:center;
+  color: #696969;
+  font-size: 50px;
+  text-align:center;
 }
 
 #heading {
   font-family: 'PT Sans', sans-serif;
-	text-align: center;
-	display: block;
+  text-align: center;
+  display: block;
 }
 
 @font-face {
-	font-family: "AvenirLTStd";
-	src: url("font/AvenirLTStd-Roman.otf");
+  font-family: "AvenirLTStd";
+  src: url("font/AvenirLTStd-Roman.otf");
 }
 
 .headings {
@@ -31,21 +31,21 @@ body {
 }
 
 .main {
-	margin-left: 60px;
-	display: grid;
-  	grid-template-columns: repeat(11, 1fr);
-  	grid-gap: 5px;
-  	grid-auto-rows: minmax(100px, auto);
-  	width: 100%; height: 100%;
+  margin-left: 60px;
+  display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(100px, auto);
+    width: 100%; height: 100%;
 }
 
 .scroll {
-	width: 1500px;
+  width: 1500px;
 }
 
 
 img {
-	width:100px;
+  width:100px;
 }
 
 .vr {
@@ -58,9 +58,9 @@ img {
 }
 
 .name {
-	color: #696969;
-	text-align: center;
-	white-space: pre-line;
+  color: #696969;
+  text-align: center;
+  white-space: pre-line;
 }
 
 * {
@@ -94,6 +94,27 @@ body {
   margin-right: 20px;
 }
 
+ /*Container around content */
+.container {
+ /* padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;*/
+}
+
+ /*The circles on the timeline */
+.container::after {
+  /*content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;*/
+}
 
  /*Place the container to the left */
 .left {
@@ -103,6 +124,34 @@ body {
 /*Place the container to the right */
 .right {
   left: 10%;
+}
+
+/*Add arrows to the left container (pointing right) */
+.left::before {
+/*  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;*/
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  /*content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;*/
 }
 
 /*Fix the circle for containers on the right side */
@@ -133,28 +182,45 @@ body {
     padding-right: 25px;
   }
 
+/*Make sure that all arrows are pointing leftwards 
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+ Make sure all circles are at the same spot 
+  .left::after, .right::after {
+    left: 15px;
+  }
+ Make all right containers behave like the left ones 
+  .right {
+    left: 0%;
+  }*/
+}
+
 .subtitle {
-	font-size: 10px;
- 	text-align: left;
- 	position: absolute;
- 	color: #696969;
- 	margin-top: -4px;
+  font-size: 10px;
+  text-align: left;
+  position: absolute;
+  color: #696969;
+  margin-top: -4px;
 }
 
  #allegation {
- 	margin-left: -10px;
+  margin-left: -10px;
  }
 
  #achievement {
- 	margin-left: 50px;
+  margin-left: 50px;
  }
 
 span, div {
-	display: inline-block;
+  display: inline-block;
 }
 
 .line {
-	display: block;
+  display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
@@ -163,25 +229,25 @@ span, div {
 }
 
 #bodySVG {
-	position: absolute;
+  position: absolute;
 }
 
-div.tooltip {	
-    position: absolute;			
-    text-align: center;			
-    width: 200px;					
-    height: 150px;					
-    padding: 2px;				
-    font: 12px sans-serif;		
-    background: white;	
-    border: 0px;		
-    border-radius: 8px;			
-    pointer-events: none;	
-    z-index: 1;		
+div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 200px;         
+    height: 150px;          
+    padding: 2px;       
+    font: 12px sans-serif;    
+    background: white;  
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none; 
+    z-index: 1;   
 }
 
 #legend {
-	position: relative;
+  position: relative;
   max-width: 400px;
   margin: 0 auto;
 }
@@ -204,6 +270,20 @@ div.tooltip {
   padding-right:20px;
   position: relative;
 }
-
-
-
+/*.btn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 10px;
+  font-family: 'PT Sans', sans-serif;
+  color: #696969;
+  font-size: 20px;
+  background: #c9a5de;
+  background: lightgray;
+  padding: 5px 15px 5px 10px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.btn:hover {
+  background: black;
+  text-decoration: none;
+}*/
