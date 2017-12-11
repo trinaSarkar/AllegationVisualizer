@@ -1,4 +1,4 @@
-d3.csv("data/data.csv", projectData, loadVisualization);
+
 
 var svg = d3.select('body').append('svg')
 .attr('id', 'bodySVG')
@@ -258,5 +258,6 @@ function drawOutcomes(name) {
 						});;	
 }
 
+d3.csv("/data/data.csv", projectData, loadVisualization);
 
 
