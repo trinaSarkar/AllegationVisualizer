@@ -1,4 +1,4 @@
-d3.csv("/data/data.csv", projectData, loadVisualization);
+d3.csv("data/data.csv", projectData, loadVisualization);
 
 var svg = d3.select('body').append('svg')
 .attr('id', 'bodySVG')
